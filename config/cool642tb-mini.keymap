@@ -44,10 +44,10 @@
 
         default_layer {
             bindings = <
-&kp Q               &kp W       &kp E         &kp R         &kp T                                                 &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A               &kp S       &kp D         &lt 4 F       &kp G        &kp LC(Y)           &kp PRINTSCREEN      &kp H        &kp J  &lt 5 K    &kp L    &kp SEMICOLON
-&mt LEFT_CONTROL Z  &kp X       &kp C         &kp V         &kp B        &kp LC(Z)           &kp ESC              &kp N        &kp M  &kp COMMA  &kp DOT  &kp BACKSLASH
-&kp DELETE          &kp C_MUTE  &kp LEFT_GUI  &kp LEFT_ALT  &lt 2 SPACE  &mt LSHIFT TAB      &mt RSHFT BACKSPACE  &lt 1 ENTER                             &kp F4
+&kp Q               &kp W       &kp E         &kp R            &kp T                                                &kp Y        &kp U  &kp I      &kp O    &kp P
+&kp A               &kp S       &kp D         &lt 4 F          &kp G     &kp LC(Y)             &kp PRINTSCREEN      &kp H        &kp J  &lt 5 K    &kp L    &kp SEMICOLON
+&mt LEFT_CONTROL Z  &kp X       &kp C         &kp V            &kp B     &kp LC(Z)             &kp ESC              &kp N        &kp M  &kp COMMA  &kp DOT  &kp TAB
+&kp DELETE          &kp C_MUTE  &kp LEFT_GUI  &mt LEFT_ALT F6  &lt 2 F7  &mt LSHIFT SPACE      &mt RSHFT BACKSPACE  &lt 1 ENTER                             &kp F4
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
@@ -55,19 +55,19 @@
 
         FUNCTION {
             bindings = <
-&kp N1    &kp N2     &kp N3        &kp N4          &kp N5                           &kp N6           &kp N7         &kp N8     &kp N9        &kp N0
-&kp HASH  &kp MINUS  &kp PLUS      &kp BACKSLASH   &kp EQUAL  &trans      &kp HOME  &kp PERCENT      &kp LEFT       &kp RIGHT  &kp UP_ARROW  &kp DOWN
-&kp F11   &kp F2     &kp ASTERISK  &kp UNDERSCORE  &kp LCTRL  &trans      &trans    &kp EXCLAMATION  &kp AMPERSAND  &kp PIPE   &kp TILDE     &kp DOLLAR
-&trans    &trans     &trans        &trans          &trans     &trans      &trans    &trans                                                   &trans
+&kp N1    &kp N2     &kp N3        &kp N4          &kp N5                                &kp N6         &kp N7     &kp N8     &kp N9        &kp N0
+&kp HASH  &kp MINUS  &kp PLUS      &kp BACKSLASH   &kp EQUAL    &trans         &kp HOME  &kp AMPERSAND  &kp LEFT   &kp RIGHT  &kp UP_ARROW  &kp DOWN
+&trans    &trans     &kp ASTERISK  &kp UNDERSCORE  &kp PERCENT  &trans         &trans    &trans         &kp CARET  &kp PIPE   &kp TILDE     &kp DOLLAR
+&trans    &trans     &trans        &trans          &trans       &kp LCTRL      &trans    &trans                                             &trans
             >;
         };
 
         NUM {
             bindings = <
-&kp LS(EXCL)  &kp AT        &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)                      &kp CARET    &kp AMPERSAND  &kp LS(UNDER)     &kp TILDE     &kp MINUS
-&kp SQT       &kp LS(LBRC)  &kp LBKT       &kp LS(LPAR)  &kp LS(DQT)    &trans      &trans  &kp LS(DQT)  &kp LS(RPAR)   &kp RBKT          &kp LS(RBRC)  &kp SQT
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4   &trans      &trans  &trans       &kp LESS_THAN  &kp GREATER_THAN  &kp PIPE      &kp BACKSLASH
-&bt BT_CLR    &trans        &trans         &trans        &trans         &trans      &trans  &trans                                                      &trans
+&kp F2        &kp F3        &kp F5        &kp F11       &trans                            &trans       &kp EXCLAMATION  &kp QUESTION      &kp TILDE     &kp MINUS
+&kp SQT       &kp LS(LBRC)  &kp LBKT      &kp LS(LPAR)  &kp LS(DQT)   &trans      &trans  &kp LS(DQT)  &kp LS(RPAR)     &kp RBKT          &kp LS(RBRC)  &kp SQT
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans      &trans  &trans       &kp LESS_THAN    &kp GREATER_THAN  &kp PIPE      &kp BACKSLASH
+&bt BT_CLR    &trans        &trans        &trans        &trans        &trans      &trans  &trans                                                        &trans
             >;
         };
 
@@ -89,6 +89,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans  &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp 0 0>;
         };
 
         SCROLL {
