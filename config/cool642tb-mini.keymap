@@ -26,6 +26,16 @@
             bindings = <&kp LANG1>;
             key-positions = <18 19>;
         };
+
+        backslash {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <13 18>;
+        };
+
+        latex {
+            bindings = <&latex>;
+            key-positions = <21 20>;
+        };
     };
 
     behaviors {
@@ -36,6 +46,29 @@
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
             tap-ms = <20>;
+        };
+    };
+
+    macros {
+        latex: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp L &kp A &kp T &kp E &kp X>;
+            label = "NEW_MACRO";
+        };
+
+        noindent: noindent {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp BSLH &kp S &kp E &kp T &kp L &kp E &kp N &kp G &kp T &kp H &kp LBRC &kp BSLH &kp P &kp A &kp R &kp I &kp N &kp D &kp E &kp N &kp T &kp RBRC &kp LBRC &kp N0 &kp P &kp T &kp RBRC>;
+            label = "NOINDENT";
+        };
+
+        QAbox: QAbox {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp BSLH &kp B &kp E &kp G &kp I &kp N &kp LBRC &kp Q &kp B &kp O &kp X &kp RBRC &kp RET &kp SPACE &kp SPACE &kp LBRC &kp RBRC &kp RET &kp SPACE &kp SPACE &kp LBRC &kp RBRC &kp RET &kp SPACE &kp SPACE &kp LBRC &kp RBRC &kp RET &kp RET &kp RET &kp SPACE &kp SPACE &kp BSLH &kp Q &kp S &kp E &kp P &kp RET &kp RET &kp BSLH &kp E &kp N &kp D &kp LBRC &kp Q &kp B &kp O &kp X &kp RBRC>;
+            label = "QABOX";
         };
     };
 
@@ -79,7 +112,7 @@
             bindings = <
 &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &trans         &trans                               &bt BT_CLR  &trans  &trans  &trans  &trans
 &kp LG(SPACE)  &kp LG(A)     &kp C_MUTE    &kp LC(LS(C))  &kp PRINTSCREEN  &trans      &trans  &trans      &trans  &trans  &trans  &trans
-&trans         &trans        &trans        &trans         &trans           &trans      &trans  &trans      &trans  &trans  &trans  &trans
+&noindent      &QAbox        &trans        &trans         &trans           &trans      &trans  &trans      &trans  &trans  &trans  &trans
 &trans         &trans        &trans        &trans         &trans           &trans      &trans  &trans                              &trans
             >;
 
