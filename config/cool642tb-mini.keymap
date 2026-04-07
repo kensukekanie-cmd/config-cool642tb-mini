@@ -67,7 +67,7 @@
         QAbox: QAbox {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp BSLH &kp B &kp E &kp G &kp I &kp N &kp LBRC &kp Q &kp B &kp O &kp X &kp RBRC &kp RET &kp SPACE &kp SPACE &kp LBRC &kp RBRC &kp RET &kp LBRC &kp RBRC &kp RET &kp LBRC &kp RBRC &kp RET>;
+            bindings = <&kp BSLH &kp B &kp E &kp G &kp I &kp N &kp LBRC &kp Q &kp B &kp O &kp X &kp RBRC &kp RET &kp SPACE &kp SPACE &kp LBRC>;
             label = "QABOX";
         };
     };
