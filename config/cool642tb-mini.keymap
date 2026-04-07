@@ -67,7 +67,7 @@
         QAbox: QAbox {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp BSLH &kp B &kp E &kp G &kp I &kp N &kp LBRC &kp Q &kp B &kp O &kp X &kp RBRC &kp RET &kp SPACE &kp SPACE &kp LBRC &kp RBRC &kp RET &kp SPACE &kp SPACE &kp LBRC &kp RBRC &kp RET &kp SPACE &kp SPACE &kp LBRC &kp RBRC &kp RET &kp RET &kp RET &kp SPACE &kp SPACE &kp BSLH &kp Q &kp S &kp E &kp P &kp RET &kp RET &kp BSLH &kp E &kp N &kp D &kp LBRC &kp Q &kp B &kp O &kp X &kp RBRC>;
+            bindings = <&kp BSLH &kp B &kp E &kp G &kp I &kp N &kp LBRC &kp Q &kp B &kp O &kp X &kp RBRC &kp RET &kp SPACE &kp SPACE &kp LBRC &kp RBRC &kp RET &kp LBRC &kp RBRC &kp RET &kp LBRC &kp RBRC &kp RET>;
             label = "QABOX";
         };
     };
@@ -90,7 +90,7 @@
             bindings = <
 &kp N1              &kp N2      &kp N3       &kp N4          &kp N5                                        &kp N6     &kp N7     &kp N8     &kp N9         &kp N0
 &kp HASH            &kp EQUAL   &kp MINUS    &kp PLUS        &kp ASTERISK  &trans                  &trans  &kp SLASH  &kp LEFT   &kp RIGHT  &kp AMPERSAND  &kp COLON
-&kp LG(DOWN_ARROW)  &kp DOLLAR  &kp PERCENT  &kp UNDERSCORE  &trans        &trans                  &trans  &trans     &kp CARET  &kp PIPE   &trans         &kp LG(UP_ARROW)
+&kp LG(LEFT_ARROW)  &kp DOLLAR  &kp PERCENT  &kp UNDERSCORE  &trans        &trans                  &trans  &trans     &kp CARET  &kp PIPE   &trans         &kp LG(RIGHT)
 &trans              &trans      &trans       &trans          &trans        &kp LC(LEFT_SHIFT)      &trans  &trans                                          &trans
             >;
 
@@ -99,10 +99,10 @@
 
         NUM {
             bindings = <
-&trans   &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &trans                                        &trans          &kp EXCLAMATION  &kp QUESTION  &kp TILDE  &trans
-&kp SQT  &kp LEFT_BRACE   &kp LBKT           &kp LEFT_PARENTHESIS   &kp DOUBLE_QUOTES  &trans      &trans         &kp SLASH       &kp UP_ARROW     &kp END       &kp HOME   &kp AT
-&trans   &kp F2           &kp F5             &kp F11                &trans             &trans      &trans         &trans          &kp DOWN_ARROW   &trans        &trans     &kp LC(SLASH)
-&trans   &trans           &trans             &trans                 &trans             &trans      &kp BACKSPACE  &kp LEFT_SHIFT                                            &trans
+&trans              &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &trans                                        &trans          &kp EXCLAMATION  &kp QUESTION   &kp TILDE  &trans
+&kp SQT             &kp LEFT_BRACE   &kp LBKT           &kp LEFT_PARENTHESIS   &kp DOUBLE_QUOTES  &trans      &trans         &kp SLASH       &kp UP_ARROW     &kp END        &kp HOME   &kp AT
+&kp LG(DOWN_ARROW)  &kp F2           &kp F5             &kp F11                &trans             &trans      &trans         &trans          &kp DOWN_ARROW   &kp LC(SLASH)  &trans     &kp LG(UP_ARROW)
+&trans              &trans           &trans             &trans                 &trans             &trans      &kp BACKSPACE  &kp LEFT_SHIFT                                             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(TAB) LC(LS(TAB))>;
