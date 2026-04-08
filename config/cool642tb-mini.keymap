@@ -28,7 +28,7 @@
         };
 
         backslash {
-            bindings = <&kp BACKSPACE>;
+            bindings = <&kp BACKSLASH>;
             key-positions = <13 18>;
         };
 
